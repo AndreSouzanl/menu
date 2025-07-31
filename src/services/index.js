@@ -11,6 +11,7 @@ export function buscarProdutos(textoDigitado) {
   return produtos.filter(
     (prod) =>
       prod.nome.toLowerCase().includes(textoDigitado.toLowerCase()) ||
-      prod.categoria.toLowerCase().includes(textoDigitado.toLowerCase())
+      prod.categoria.toLowerCase().includes(textoDigitado.toLowerCase()) ||
+      prod.descricao.toLowerCase().includes(textoDigitado.toLowerCase())
   );
 }

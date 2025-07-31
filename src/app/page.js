@@ -6,14 +6,13 @@ import Categoria from "@/componentes/Categoria/Categoria";
 import CampoBusca from "@/componentes/CampoBusca/CampoBusca";
 import Card from "@/componentes/Card/Card";
 import Banner from "/public/banner.png";
-import { produtos } from "@/data/dados/data_produtos";
 import { produtosEntradas } from "@/services";
 import { useState } from "react";
 import { filtrarProdutos, buscarProdutos } from "@/services";
 
 export default function Home() {
   const [dadosFiltrados, setDadosFiltrados] = useState(produtosEntradas);
-  const [botaoClicado, setBotaoClicado] = useState("Entradas");
+  const [botaoClicado, setBotaoClicado] = useState("Entrada");
   const [textoDigitado, setTextoDigitado] = useState("");
 
   function handleFiltrarProduto(categoria) {
