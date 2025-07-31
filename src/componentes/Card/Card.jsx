@@ -12,7 +12,7 @@ export default function Card(props) {
           <p>{props.paragrafo}</p>
         </div>
         <div className={estilos.container_span}>
-          <span>{props.preco}</span>
+          <span>{new Intl.NumberFormat("pt-br", {style: "currency", currency: "BRL"}).format(props.preco)}</span>
         </div>
       </div>
     </div>
