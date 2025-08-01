@@ -57,7 +57,7 @@ export default function Categoria(props) {
         }
         onClick={() => props.onclickFilter("Saladas")}
       >
-        <Image src={icone.Saladas} alt="icone entrada" />
+       <Image src={icone.Saladas} alt="icone entrada" />
         <span>Saladas</span>
       </button>
       <button

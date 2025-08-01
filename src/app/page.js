@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import estilos from "./page.module.css";
 import Categoria from "@/componentes/Categoria/Categoria";
@@ -14,14 +13,16 @@ export default function Home() {
   const [dadosFiltrados, setDadosFiltrados] = useState(produtosEntradas);
   const [botaoClicado, setBotaoClicado] = useState("Entrada");
   const [textoDigitado, setTextoDigitado] = useState("");
-
   function handleFiltrarProduto(categoria) {
+    setTextoDigitado("");
     setDadosFiltrados(filtrarProdutos(categoria));
     setBotaoClicado(categoria);
   }
   function handleBuscarProduto(textoDigitado) {
     setTextoDigitado(textoDigitado);
-    setDadosFiltrados(buscarProdutos(textoDigitado));
+    textoDigitado.length >= 3 &&
+      setDadosFiltrados(buscarProdutos(textoDigitado));
+    setBotaoClicado("");
   }
   return (
     <div className={estilos.container}>
